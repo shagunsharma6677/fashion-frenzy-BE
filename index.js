@@ -33,9 +33,11 @@ app.use("/admin", adminRouter);
   //  app.use(auth)
 app.use("/adminsdetails", adminRouter); //this route is for admin login and details.
 
+const PORT = process.env.port || 7700
 
 
-app.listen(process.env.port, async () => {
+
+app.listen(PORT, async () => {
   try {
     await connection;
     console.log("Connected to DataBase");
